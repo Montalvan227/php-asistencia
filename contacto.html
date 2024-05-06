@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Colegio | María José Sime Barbadillo</title>
+    <link rel="shortcut icon" href="img/sime.ico">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="css/contacto.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jivosite.com/widget/osFOtGHGky" async></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-mjsb">
+            </div>
+            <nav style="margin-top: 45px;">
+                <a href="inicio.html">Inicio</a>
+                <a href="inicio.html#nosotros">Nosotros</a>
+                <a href="#">Colegio</a>
+                <a href="inicio.html#galeria">Galería</a>
+                <a href="login.php">Virtual</a>
+            </nav>
+        </div>
+        <section class="textos-header">
+            <h1>CONTACTANOS</h1>
+            <h2>¡Bienvenidos al formulario de contacto de la Institución Educativa!</h2>
+        </section>
+    </header>
+    <div class="whatsapp-float">
+        <a href="https://api.whatsapp.com/send?phone=+51926260866&text=Información" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <main>
+        <div class="contact-in">
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.2620909034118!2d-79.82095023039311!3d-6.387760666821158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904c9eadb8bfe043%3A0x41f55fc443d69cb9!2sC.%20Almte.%20Miguel%20Grau%20881%2C%20Jayanca%2014151!5e0!3m2!1ses-419!2spe!4v1693895193676!5m2!1ses-419!2spe" 
+                width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact-form">
+                <h1>CONTACTANOS</h1>
+                <form id="contacto" action="https://formsubmit.co/065c24b7095648500f9fd1d946c511c2" method="POST">
+                    <input id="nombre" type="text" placeholder="Nombre Completo" name="Nombres" class="contact-form-txt">
+
+                    <input id="correo" type="email" placeholder="Correo Electrónico" name="Correo" class="contact-form-txt">
+
+                    <input id="celular" type="tel" placeholder="Número Celular" name="Celular" class="contact-form-txt" pattern="[0-9]{9}" maxlength="9">
+
+                    <input id="dni" type="text" placeholder="DNI" name="Dni" class="contact-form-txt" pattern="[0-9]{8}" maxlength="8">
+                    <div class="select-container">
+                        <label for="opciones">Selecciona una opción:</label>
+                        <select id="opciones" name="Opciones" class="contact-form-select">
+                            <option value="Matrículas">Matrículas</option>
+                            <option value="Pagos">Pagos</option>
+                            <option value="Información">Información</option>
+                        </select>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6Ld_7CApAAAAAPzubP0fnv3dQWCCf-KzWu8kVsl6" data-callback="recaptchaCallback" style="margin-bottom: 20px;"></div>
+                    <input type="submit" value="Enviar" class="contact-form-btn" id="enviarBtn" disabled>
+                    <input type="hidden" name="_next" value="https://iepmariajosesimebarbadillo.org/contacto.html">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+                <script>
+                  function recaptchaCallback() {
+                    document.getElementById('enviarBtn').removeAttribute('disabled');
+                  }
+                </script>
+                <script>
+                    document.getElementById("contacto").addEventListener("submit", function (event) {
+                        var nombre = document.getElementById("nombre").value;
+                        var correo = document.getElementById("correo").value;
+                        var celular = document.getElementById("celular").value;
+                        var dni = document.getElementById("dni").value;
+                        var opciones = document.getElementById("opciones").value;
+
+                        // Validar que todos los campos estén completos
+                        if (!nombre || !correo || !celular || !dni || !opciones) {
+                            alert("Por favor, completa todos los campos.");
+                            event.preventDefault(); 
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-distributed">
+            <div class="footer-left">
+                <p class="logof">MARIA JOSE SIME BARBADILLO</p><img src="./img/logo1.png" class="logofoo" alt="" width="10%">
+                <p class="footer-links">
+                    <a href="inicio.html">Inicio</a>
+                    |
+                    <a href="inicio.html#nosotros">Nosotros</a>
+                    |
+                    <a href="inicio.html#galeria">Galería</a>
+                    |
+                    <a href="contacto.html">Contacto</a>
+                </p>
+                <p class="footer-nombre">Copyright &copy;, 2023, <strong>María José Sime Barbadillo</strong>
+                    Todos los derechos reservados</p>
+            </div>
+            <div class="footer-center">
+                <div>
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <p>Miguel Graú N°888, Jayanca</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-square-phone"></i>
+                    <p>+51 961 620 781</p>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-envelope"></i>
+                    <p><a>iep.ips.simebarbadillo@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p class="footer-nosotros">
+                    <span>Acerca de nosotros</span>
+                    <strong>María José Sime Barbadillo</strong> Somos
+                    una Institución Educativa Privada
+                    enfocada en la formación integral de
+                    nuestros estudiantes del nivel
+                    Inicial, Primaria y Secundaria.
+                </p>
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/mariajose.simebarbadillo.18"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.youtube.com/@mariajosesimebarbadillo5754"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B51961620781&text&type=phone_number&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+    </footer>
+</body>
+</html>
